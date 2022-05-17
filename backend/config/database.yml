@@ -11,12 +11,12 @@ development:
   <<: *default
   database: challenge_development
 
-# test:
-#   <<: *default
-#   database: challenge_test
+test:
+  <<: *default
+  database: challenge_test
 
-# production:
-#   <<: *default
-#   database: challenge_production
-#   username: challenge
-#   password: <%= ENV['challenge_DATABASE_PASSWORD'] %>
+production:
+  <<: *default
+  database: challenge_production
+  username: challenge
+  password: <%= ENV['challenge_DATABASE_PASSWORD'] %>
