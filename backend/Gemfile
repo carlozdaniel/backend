@@ -32,7 +32,7 @@ gem 'faraday', '~> 1.0'
 gem 'faraday_middleware', '~> 1.0'
 
 # Background Jobs
-# gem 'sidekiq', '~> 6.2', '>= 6.2.1'
+gem 'sidekiq', '~> 6.2', '>= 6.2.1'
 # gem 'sidekiq_alive', '~> 2.1', '>= 2.0.6'
 # gem 'sidekiq-cron', '~> 1.2'
 # gem 'sidekiq-failures', '~> 1.0'
@@ -41,7 +41,8 @@ gem 'faraday_middleware', '~> 1.0'
 # gem 'sidekiq-unique-jobs', '~> 7.1', '>= 7.0.9'
 
 # ElasticSearch
-# gem 'searchkick', '~> 4.4', '>= 4.4.4'
+gem 'elasticsearch'
+gem 'searchkick', '~> 4.4', '>= 4.4.4'
 
 # Users
 # gem 'pundit', '~> 2.1'
@@ -71,7 +72,7 @@ gem 'lograge', '~> 0.11'
 # gem 'sentry-ruby', '~> 4.6'
 # gem 'sentry-sidekiq', '~> 4.6'
 
-# Health
+# Health #que tenga acceso a los recursos configurados correctamente
 # gem 'health_bit', '~> 0.1'
 
 # JSON
@@ -79,8 +80,8 @@ gem 'lograge', '~> 0.11'
 gem 'oj', '~> 3.13'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'bullet', '~> 6.1'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '~> 11.1', platforms: %i[mri mingw x64_mingw]
   gem 'cypress-on-rails', '~> 1.11'
   gem 'database_cleaner-active_record', '~> 2.0'
@@ -88,6 +89,7 @@ group :development, :test do
   gem 'faker', '~> 2.18'
   gem 'pry-rails', '~> 0.3'
   gem 'rspec-rails', '~> 5.0'
+  gem 'rswag-specs', '~> 2.4'
   # gem 'simplecov', '~> 0.21', require: false
   # gem 'simplecov-lcov', '~> 0.8', require: false
 end
@@ -107,3 +109,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+# gem 'rswag-api'
+# gem 'rswag-ui'
