@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 class SearchWorker
   include Sidekiq::Worker
@@ -9,7 +10,7 @@ class SearchWorker
     save_repositories
   end
 
-  def save_repositories # mandar a sideki
+  def save_repositories
     @repos = connection.get(repos, { per_page: 100 }).body
     @repos.each do |repo|
       repo_id = repo['id']
@@ -34,5 +35,4 @@ class SearchWorker
       f.response :json # decode response bodies as JSON
     end
   end
-
 end

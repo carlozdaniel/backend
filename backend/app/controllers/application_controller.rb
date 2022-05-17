@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::API
   def repos(user_params)
     "https://api.github.com/users/#{user_params}/repos"
